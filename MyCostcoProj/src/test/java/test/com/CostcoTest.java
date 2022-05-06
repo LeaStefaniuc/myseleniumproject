@@ -57,7 +57,7 @@ public class CostcoTest {
         driver.findElement(By.id("search-field")).clear();
         driver.findElement(By.id("search-field")).sendKeys("dell laptop");
         driver.findElement(By.id("formcatsearch")).submit();
-        //Thread.sleep(3000);
+        Thread.sleep(3000);
         test2AddToCart();
     }
 //Add to cart
@@ -77,7 +77,7 @@ public class CostcoTest {
         wait1.until(ExpectedConditions.visibilityOfElementLocated((By.id("add-to-cart-btn"))));
 
         driver.findElement(By.id("add-to-cart-btn")).click();
-        //Thread.sleep(15000);
+        
 
         // Wait for the pop up element to be visible
         WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(15));
@@ -93,12 +93,11 @@ public class CostcoTest {
         js.executeScript("window.scrollTo(0, 400)");
 
         driver.findElement(By.id("shopCartCheckoutSubmitButton")).click();
+       Thread.sleep(3000);
         test3LogIn();
     }
     //Login   
-
-    
-    
+   
     public void test3LogIn() throws Exception {
         System.out.println("3test");
         
@@ -122,6 +121,6 @@ public class CostcoTest {
         
         Thread.sleep(4000);
         
-        driver.quit();
+        driver.close();
     }
 }
