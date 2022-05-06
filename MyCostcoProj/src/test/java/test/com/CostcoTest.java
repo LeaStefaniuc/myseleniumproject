@@ -43,9 +43,9 @@ public class CostcoTest {
         System.out.println("1test");
         System.setProperty("webdriver.chrome.driver", "c:\\\\data\\\\chromedriver.exe");
         
-//        ChromeOptions options = new ChromeOptions();
-//        options.addArguments("headless");
-//        ChromeDriver driver = new ChromeDriver(options);
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("headless");
+        ChromeDriver driver = new ChromeDriver(options);
         
         driver = new ChromeDriver();
         baseUrl = "https://www.google.com/";
